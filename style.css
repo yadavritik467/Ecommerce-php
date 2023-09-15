@@ -296,13 +296,16 @@ header .icons i:hover{
     padding: 1rem;
     text-align: center;
     width: 25rem;
-    transform: scale(0);
+    transform: scale(1.0);
     transform-origin: top right;
     line-height: 2;
 
 }
 
-
+.header.user-box:active{
+    /* transform: scale(1.0); */
+    transition: 0.2s linear;
+}
 
 .logout-btn{
     background: #000;

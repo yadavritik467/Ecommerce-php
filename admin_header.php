@@ -17,18 +17,20 @@
                 <a href="admin_message.php">Message</a>
             </nav>
             <div class="icons">
+                <i class="bi bi-person" id="user-btn"></i>
+                <i class="bi bi-list" id="menu-btn"></i>
                 <!--put icons here -->
                 <!--put icons here -->
             </div>
             <div class="user-box">
                 <p>Username : <span>
-                    <!-- <?php echo $_SESSION['admin_name']?> -->
+                    <?php echo $_SESSION['admin_name']?>
                 </span></p>
                 <p>Email : <span>
-                    <!-- <?php echo $_SESSION['admin_email']?> -->
+                    <?php echo $_SESSION['admin_email']?>
                 </span></p>
                 <form action="" method="post">
-                    <button type="submit" class="logout-btn">Logout</button>
+                <button type="submit" name="logout" class="logout-btn">Logout</button>
                 </form>
             </div>
         </div>

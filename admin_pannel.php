@@ -1,19 +1,20 @@
 <?php
-// include 'connection.php';
-// session_start();
-// $admin_id = $_SESSION['admin_name'];
-// echo $admin_id;
+include 'connection.php';
+session_start();
+$admin_id = $_SESSION['admin_name'];
 
-// if (!isset($admin_id)) {
-//     header('location: login.php');
-//     exit();
-// }
 
-// if (isset($_POST['logout'])) {
-//     session_destroy();
-//     header('location: login.php');
-//     exit();
-// }
+
+if (!isset($admin_id)) {
+    header('location: login.php');
+    // exit();
+}
+
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header('location:login.php');
+    // exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +23,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <title>Admin Panel</title>
 </head>

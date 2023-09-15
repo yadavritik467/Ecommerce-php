@@ -14,9 +14,9 @@ if(isset($_POST['submit-btn'])){
   
   if(password_verify($password,$row['password'])){
     if($row['user_type']=='admin'){
-        $session['admin_name'] = $row['name'];
-        $session['admin_email'] = $row['email'];
-        $session['admin_id'] = $row['id'];
+        $_SESSION['admin_name'] = $row['name'];
+        $_SESSION['admin_email'] = $row['email'];
+        $_SESSION['admin_id'] = $row['id'];
         $message[] = 'login successfully'; 
          // Redirect to the registration page with a delay of 3 seconds
     echo '<script>
@@ -26,9 +26,9 @@ if(isset($_POST['submit-btn'])){
   </script>';
         // header('location:admin_pannel.php');
       }else if($row['user_type']=='user'){
-        $session['user_name'] = $row['name'];
-        $session['user_email'] = $row['email'];
-        $session['user_id'] = $row['id'];
+        $_SESSION['user_name'] = $row['name'];
+        $_SESSION['user_email'] = $row['email'];
+        $_SESSION['user_id'] = $row['id'];
         $message[] = 'login successfully'; 
         // Redirect to the registration page with a delay of 3 seconds
    echo '<script>
@@ -70,6 +70,7 @@ if(isset($_POST['submit-btn'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <title>Register Page</title>
 </head>
