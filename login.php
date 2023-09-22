@@ -34,7 +34,7 @@ if(isset($_POST['submit-btn'])){
    echo '<script>
    setTimeout(function() {
        window.location.href = "index.php";
-   }, 2000); 
+   }, 1500); 
  </script>';
         } else{
             $message[] = 'Please login to access this page'; 
