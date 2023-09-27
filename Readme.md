@@ -26,9 +26,4 @@ by clicking the link you can douwnload the xampp app
 
 <!-- ---------------------------------------------------- -->
 
-5.  also you have to create some schema in your mysqli
-for this you have to open new tab in your browser and type this in the search bar --> localhost/phpmyadmin
-
-and then  create database name = ecommerce
-
-  * cart =>  
+5. also import the data from SQL folder into your -> localhost/phpmyadmin
