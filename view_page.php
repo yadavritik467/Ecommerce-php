@@ -4,23 +4,24 @@ session_start();
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
-    header('location: login.php');
-    // exit();
+    echo '<script>
+    window.location.href = "login.php";
+    </script>';
+    exit();
 }
 
 if (isset($_POST['logout'])) {
     session_destroy();
-    header('location:login.php');
-    // exit();
+    echo '<script>
+    window.location.href = "login.php";
+    </script>';
+    exit();
 }
 
 
 ?>
 
-<style type="text/css">
-<?php include 'main.css';
-?>
-</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +35,6 @@ if (isset($_POST['logout'])) {
 </head>
 
 <body>
-    <?php  include 'main.css'; ?>
     <?php  include 'header.php'; ?>
 
 

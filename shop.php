@@ -75,7 +75,7 @@ if(mysqli_num_rows($cart_number)>0){
 
 <div class="banner">
         <div class="detail">
-            <h1>Admin dashboard</h1>
+            <h1>Our Shop</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quo odit mollitia minus blanditiis esse!</p>
             <a href="index.php">Home </a> /<span>About us</span>
         </div>

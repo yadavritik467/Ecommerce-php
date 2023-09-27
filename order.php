@@ -74,8 +74,9 @@ if(isset($_POST['submit-btn'])){
         </div>
     </div>
     <div class="line2"></div>
+    <div class="line2"></div>
 
-    <div class="order-section">
+    <div class="order-container">
         <div class="box-container">
             <?php 
             $select_orders = mysqli_query($conn,"SELECT * FROM `order` WHERE user_id='$user_id'") or die('query failed');

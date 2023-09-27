@@ -99,7 +99,7 @@ if(isset($_POST['submit-btn'])){
         </div>
         </div>
     </div>
-</div>
+    </div>
 
 
 <div class="line2"></div>

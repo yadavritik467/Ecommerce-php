@@ -35,13 +35,13 @@ if (isset($_POST['logout'])) {
 <?php  include 'header.php'; ?>
 
 
-<div class="banner">
+<!-- <div class="banner">
         <div class="detail">
-            <h1>Admin dashboard</h1>
+            <h1>About </h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur quo odit mollitia minus blanditiis esse!</p>
             <a href="index.php">Home </a> /<span>About us</span>
         </div>
-    </div>
+    </div> -->
    <div class="line2"></div>
 
    <!-- about us -->
@@ -69,42 +69,42 @@ if (isset($_POST['logout'])) {
    <!----------features ---------------->
 
    <div class="features">
-    <div class="title">
-        <h1>Complete Customer Ideas</h1>
+      <div class="title">
+          <h1>Complete Customer Ideas</h1>
         <span>best features</span>
-    </div>
-   <div class="row">
-   <div class="box">
+      </div>
+     <div class="row">
+     <div class="box">
         <img src="https://cdn.pixabay.com/photo/2018/08/17/15/29/call-3613071_640.png" alt="">
         <h4>24 X 7</h4>
         <p>Online support 24/7</p>
-    </div>
-    <div class="box">
+      </div>
+      <div class="box">
         <img src="https://cdn.pixabay.com/photo/2016/10/26/15/08/seal-1771694_1280.png" alt="">
         <h4>Money Back Gurantee</h4>
         <p>100% Secure Payment</p>
-    </div>
-    <div class="box">
+      </div>
+      <div class="box">
         <img src="https://media.istockphoto.com/id/1455291837/photo/gift-cards-with-red-colored-bow-on-red-background-stock-photo.webp?b=1&s=612x612&w=0&k=20&c=4Jc-fXlAaUtgbv4pZ5o8BYHgAd_6mHDn5GH1i7QPWWM=" alt="">
         <h4>Special Gift Card</h4>
         <p>Give The Perfect Gift</p>
-    </div>
-    <div class="box">
+     </div>
+     <div class="box">
         <img src="https://cdn.pixabay.com/photo/2018/05/18/16/41/globe-3411506_1280.jpg" alt="">
         <h4>Worldwide Shipping</h4>
         <p>On Order Over $99</p>
-    </div>
-    <div class="box">
+      </div>
+        <div class="box">
         <img src="https://cdn.pixabay.com/photo/2016/05/29/01/17/special-offer-1422378_640.png" alt="">
         <h4>Special offers</h4>
         <p>On continue shopping</p>
-    </div>
-    <div class="box">
+       </div>
+       <div class="box">
         <img src="https://th.bing.com/th/id/OIP.PF6rCmFcEmklsBGXEanKUQHaB1?w=333&h=86&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
         <h4>Subscription</h4>
         <p>For the entertainment purpose</p>
-    </div>
-   </div>
+        </div>
+      </div>
    </div>
 
    <div class="line2"></div>

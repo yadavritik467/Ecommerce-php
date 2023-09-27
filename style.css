@@ -162,7 +162,7 @@ input[type=submit]{
     height: 100vh;
     display: grid;
     place-items: center;
-    padding: .5rem;
+    padding: 0;
     /* position: relative; */
 }
 
@@ -414,6 +414,8 @@ header .icons i:hover{
     background: var(--orange);
     margin-top: -3.5rem;
 }
+
+
 
 .show-products::before,
 .order-container::before
@@ -1392,7 +1394,7 @@ footer .bottom-footer{
 }
 
 .wishlist_total{
-    width: 1200px;
+    width: 100%;
     box-shadow: var(--box-shadow);
     margin: 2rem auto;
     border: 1px solid gainsboro;
@@ -1436,7 +1438,7 @@ footer .bottom-footer{
     text-transform: capitalize;
     background-color: #000;
     color: var(--orange);
-    width: 50%;
+    width: 100%;
     margin: auto;
     padding: .5rem 0;
     border-radius: 5px;
@@ -1532,6 +1534,7 @@ align-items: center;
 }
 
 
+
 /* ---------------media screen------------- */
 
 @media screen and (max-width:991px) {
@@ -1580,4 +1583,65 @@ align-items: center;
     .banner .detail p{
         font-size: 18px;
     }
+
+   
 }
+
+
+@media screen and (max-width:700px) {
+     /* ----------------------------for form */
+     .services .row{
+        display: block;
+    }
+     .form-container-contact{
+        padding: 1rem ;
+     }
+     .form-container-contact > form {
+        width: 100%;
+        
+    }
+}
+
+@media screen and (max-width:500px) {
+    .services{
+        padding: 0;
+    }
+    .services .row,.features .row{
+        display: block;
+    }
+   .services .row .box{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     /* width: 100%; */
+     height: fit-content;
+   }
+   .features .row .box{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     width: 100%;
+     height: fit-content;
+   }
+
+   .wishlist_total{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gainsboro;
+    text-align: center;
+    padding: 3rem 0;
+    line-height: 2;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.checkout-form form{
+    width: 100%;
+    box-shadow: 0px 0px 10px grey;
+    border-radius:10px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+  
+}
+

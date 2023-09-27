@@ -6,14 +6,18 @@ $user_id = $_SESSION['user_id'];
 
 
 if (!isset($user_id)) {
-    header('location: login.php');
-    // exit();
+    echo '<script>
+    window.location.href = "login.php";
+    </script>';
+    exit();
 }
 
 if (isset($_POST['logout'])) {
     session_destroy();
-    header('location:login.php');
-    // exit();
+    echo '<script>
+    window.location.href = "login.php";
+    </script>';
+    exit();
 }
 
 // for wishlist
@@ -166,7 +170,7 @@ if(mysqli_num_rows($cart_number)>0){
     <h1 class="title">What Our Customers Says !!</h1>
     <div class="testimonial-slider">
         <div class="testimonial-item-hide">
-        <img src="" alt="">
+        <img src="https://cdn.pixabay.com/photo/2022/09/02/20/03/man-7428290_640.jpg" alt="">
         <div class="testimonial-caption">
             <span>Test The Quality 1</span>
             <h1>Organic Premium Honey</h1>
@@ -174,7 +178,7 @@ if(mysqli_num_rows($cart_number)>0){
         </div>
         </div>
         <div class="testimonial-item-hide">
-        <img src="" alt="">
+        <img src="https://cdn.pixabay.com/photo/2017/07/31/14/55/black-and-white-2558273_640.jpg" alt="">
         <div class="testimonial-caption">
             <span>Test The Quality 2</span>
             <h1>Organic Premium Honey</h1>
@@ -182,7 +186,7 @@ if(mysqli_num_rows($cart_number)>0){
         </div>
         </div>
         <div class="testimonial-item-hide">
-        <img src="" alt="">
+        <img src="https://cdn.pixabay.com/photo/2014/09/30/22/50/male-467711_640.jpg" alt="">
         <div class="testimonial-caption">
             <span>Test The Quality 3</span>
             <h1>Organic Premium Honey</h1>
