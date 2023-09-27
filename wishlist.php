@@ -30,7 +30,7 @@ if(mysqli_num_rows($cart_number)>0){
     $message[] ='product already exists in cart';
 }else{
     mysqli_query($conn,"INSERT INTO `cart`(`user_id`,`pid`,`name`,`price`,`quantity`,`image`)VALUES('$user_id','$product_id','$product_name','$product_price','$product_quantity','$product_image')");
-    $message[] = 'product added in wishlist';
+    $message[] = 'product added in cart';
 }
 }
 

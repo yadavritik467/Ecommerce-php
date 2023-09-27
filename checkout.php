@@ -20,7 +20,34 @@ if(isset($_POST['order_btn'])){
     $email = $_POST['email'];
     $number = $_POST['number'];
     $method = $_POST['method'];
-    $address = 'flat no.' '$_POST['flat']';
+    $flat = $_POST['flat'];
+    $street = $_POST['street'];
+    $city = $_POST['city'];
+    $country = $_POST['country'];
+    $pincode = $_POST['pincode'];
+    $placed_on = date('D-M-Y');
+    $cart_total = 0;
+    $cart_product[] = '';
+    $cart_query = mysqli_query($conn,"SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
+
+    if(mysqli_num_rows($cart_query)>0){
+        while ($cart_item=mysqli_fetch_assoc($cart_query)){
+            $cart_product[] = $cart_item['name'].'('.$cart_item['quantity'].')';
+            $sub_total= ($cart_item['price']*$cart_item['quantity']);
+            $cart_total += $sub_total;
+
+        }
+    }
+    $total_products = implode(',',$cart_product);
+
+    mysqli_query($conn, "INSERT INTO `order`(`user_id`,`name`,`email`,`number`,`method`,`flat`,`street`,`city`,`country`,`pincode`,`total_products`,`total_price`,`placed_on`) VALUES('$user_id','$name','$email','$number','$method','$flat','$street','$city','$country','$pincode','$total_products','$cart_total','$placed_on')") or die("query failed");
+
+
+    mysqli_query($conn, "DELETE FROM `cart` WHERE user_id = '$user_id'") or die("query failed");
+
+
+    $message[] = 'order placed successfully';
+    header('location:checkout.php');
 }
 
 
@@ -111,17 +138,14 @@ if(isset($_POST['order_btn'])){
                 <label >Your Name</label>
                 <input type="text" name="name" placeholder="Enter your name">
             </div>
-            <div class="input-field">
-                <label >Your Name</label>
-                <input type="text" name="name" placeholder="Enter your name">
-            </div>
+           
             <div class="input-field">
                 <label >Your Number</label>
                 <input type="text" name="number" placeholder="Enter your number">
             </div>
             <div class="input-field">
                 <label >Your Email</label>
-                <input type="text" name="email" placeholder="Enter your email">
+                <input type="email" name="email" placeholder="Enter your email">
             </div>
             <div class="input-field">
                 <label >Select payment method</label>
@@ -134,12 +158,12 @@ if(isset($_POST['order_btn'])){
                 </select>
             </div>
             <div class="input-field">
-                <label >Address line 1</label>
+                <label >Flat no. </label>
                 <input type="text" name="flat" placeholder="e.g. flat no.">
             </div>
             <div class="input-field">
-                <label >Address line 2</label>
-                <input type="text" name="flat" placeholder="e.g. street name">
+                <label >Street no. </label>
+                <input type="text" name="street" placeholder="e.g. street name">
             </div>
             <div class="input-field">
                 <label >City</label>
@@ -147,17 +171,17 @@ if(isset($_POST['order_btn'])){
             </div>
             <div class="input-field">
                 <label >state</label>
-                <input type="text" name="flat" placeholder="e.g. new delhi">
+                <input type="text" name="state" placeholder="e.g. new delhi">
             </div>
             <div class="input-field">
                 <label >country</label>
-                <input type="text" name="flat" placeholder="e.g. India">
+                <input type="text" name="country" placeholder="e.g. India">
             </div>
             <div class="input-field">
                 <label >pin code</label>
-                <input type="text" name="flat" placeholder="e.g. 496001">
+                <input type="text" name="pincode" placeholder="e.g. 496001">
             </div>
-            <input type="submit" name="order-btn" class="btn" value="order now">
+            <input type="submit" name="order_btn" class="btn" value="order now">
         </form>
 
        
