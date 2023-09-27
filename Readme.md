@@ -1,14 +1,14 @@
-<!-- for running this application  -->
+----------> for running this application  <----------
 
 1. you must have xampp intalled in your computer 
 
-here is link - 
+here is link - https://www.apachefriends.org/download_success.html
 
 by clicking the link you can douwnload the xampp app
 
 <!-- ---------------------------------------------------- -->
 
-2. now open the xampp controller and run the  "apache"  and "mysql"....
+2. now open the xampp controller and run the  "apache"  and "mysql"
 
 3. now open your local drive c: , you will find " xampp " folder there now open it and you will find "htdocs" folder 
  now inside that folder create new folder name "Ecommerce" in this folder put all this code 
