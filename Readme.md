@@ -1,4 +1,4 @@
-----------> for running this application  <--------------------------
+----------> for running this application  <----------
 
 1. you must have xampp intalled in your computer 
 
