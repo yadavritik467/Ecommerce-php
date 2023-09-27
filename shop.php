@@ -55,11 +55,7 @@ if(mysqli_num_rows($cart_number)>0){
 
 ?>
 
-<style type="text/css">
-<?php 
-   include 'main.css';
-?>
-</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,7 +69,7 @@ if(mysqli_num_rows($cart_number)>0){
 </head>
 
 <body>
-<?php  include 'main.css'; ?>
+
 <?php  include 'header.php'; ?>
 
 

@@ -21,9 +21,9 @@ if(isset($_POST['update_qty_btn'])){
     $update_qty_id = $_POST['update_qty_id'];
     $update_value = $_POST['update_qty'];
 
-    echo $update_value;
+    // echo $update_value;
 
-    $update_query = mysqli_query($conn,"UPDATE `cart` SET quantity = '$update_value' WHERE id='$update_qty_id' ") or die('query failed');
+    $update_query = mysqli_query($conn,"UPDATE `cart` SET quantity = '$update_value' WHERE id='$update_qty_id'") or die('query failed');
 
     if($update_query){
         header('location:cart.php');

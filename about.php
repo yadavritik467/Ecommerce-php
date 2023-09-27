@@ -17,11 +17,7 @@ if (isset($_POST['logout'])) {
 
 ?>
 
-<style type="text/css">
-<?php 
-   include 'main.css';
-?>
-</style>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +31,7 @@ if (isset($_POST['logout'])) {
 </head>
 
 <body>
-<?php  include 'main.css'; ?>
+
 <?php  include 'header.php'; ?>
 
 

@@ -88,7 +88,12 @@ if(isset($_POST['submit-btn'])){
             <p>Name : <span><?php echo $fetch_orders['name'];?></span></p>
             <p>Number : <span><?php echo $fetch_orders['number'];?></span></p>
             <p>Email : <span><?php echo $fetch_orders['email'];?></span></p>
-            <p>Address : <span><?php echo $fetch_orders['address'];?></span></p>
+            <p>Flat : <span><?php echo $fetch_orders['flat'];?></span></p>
+            <p>Street : <span><?php echo $fetch_orders['street'];?></span></p>
+            <p>Street : <span><?php echo $fetch_orders['street'];?></span></p>
+            <p>City : <span><?php echo $fetch_orders['city'];?></span></p>
+            <p>Country : <span><?php echo $fetch_orders['country'];?></span></p>
+            <p>Pincode : <span><?php echo $fetch_orders['pincode'];?></span></p>
             <p>Payment method : <span><?php echo $fetch_orders['method'];?></span></p>
             <p>Your order : <span><?php echo $fetch_orders['total_products'];?></span></p>
             <p>Total price : <span><?php echo $fetch_orders['total_price'];?></span></p>
