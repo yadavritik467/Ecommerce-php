@@ -121,8 +121,12 @@ if(isset($_POST['update_order'])){
                         <p>Email : <span>' . $fetch_orders['email'] . '</span></p>
                         <p>Total price : <span>' . $fetch_orders['total_price'] . '</span></p>
                         <p>Method : <span>' . $fetch_orders['method'] . '</span></p>
-                        <p>Address : <span>' . $fetch_orders['address'] . '</span></p>
+                        <p>Flat : <span>' . $fetch_orders['flat'] . '</span></p>
+                        <p>Street : <span>' . $fetch_orders['street'] . '</span></p>
+                        <p>City : <span>' . $fetch_orders['city'] . '</span></p>
                         <p>Total product : <span>' . $fetch_orders['total_products'] . '</span></p>
+                        <p>Payment Status : <span>' . $fetch_orders['payment_status'] . '</span></p>
+                        <p>Payment Id : <span>' . $fetch_orders['payment_id'] . '</span></p>
                         <form method="post">
                         <input type="hidden" name="order_id" value="' . $fetch_orders['id'] . '">
                        <select name="update_payment">
@@ -130,7 +134,7 @@ if(isset($_POST['update_order'])){
                        <option value="pending">Pending</option>
                        <option value="complete">Complete</option>
                    </select>
-                   <input type="submit" name="update_order" value="update payment" class="btn" >
+                   <input type="submit" name="update_order" value="update payment" class="" > <br/>
                    <a class="delete" href="admin_order.php?delete=' . $fetch_orders['id'] . '"
                    onclick="return confirm(\'Delete this order?\');">Delete</a>
                    
@@ -150,7 +154,6 @@ if(isset($_POST['update_order'])){
 
     </section>
 
-    <div class="line"></div>
 
 
     <script src="script.js"></script>

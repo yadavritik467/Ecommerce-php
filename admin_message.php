@@ -93,7 +93,7 @@ if(isset($_GET['delete'])){
 
     <div class="line4"></div>
     <div class="line4"></div>
-    <section class="message-container">
+    <section class="order-container">
         <h1 class="title">unread message</h1>
         <div class="box-container">
             <?php 
@@ -122,8 +122,6 @@ if(isset($_GET['delete'])){
         <
 
     </section>
-   
-    <div class="line"></div>
   
 
     <script src="script.js"></script>

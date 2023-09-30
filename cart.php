@@ -103,7 +103,7 @@ if(isset($_GET['delete_all'])){
             $select_cart =mysqli_query($conn, "SELECT * FROM `cart`") or die("query failed");
             if(mysqli_num_rows($select_cart)>0){
                 while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-
+                     $total_amt = ($fetch_cart['price']*$fetch_cart['quantity']) 
             ?>
             <div method="post" class="box">
             <div class="icon">
@@ -124,13 +124,13 @@ if(isset($_GET['delete_all'])){
                     </div>
                 </form>
                 <div class="total-amt">
-                    Toatal Amount : <span><?php echo $total_amt = ($fetch_cart['price']*$fetch_cart['quantity']) ?></span>
+                    Toatal Amount : <span><?php echo $total_amt; ?></span>
                 </div>
                
             </div>
 
             <?php 
-            $grand_total +=$fetch_cart['price'];
+            $grand_total +=($fetch_cart['price']*$fetch_cart['quantity']) ;
                }
             }else{
                 echo '<p class="empty">No products added yet !!</p>';
@@ -142,9 +142,10 @@ if(isset($_GET['delete_all'])){
         
         </div>
         <div class="wishlist_total">
-        <p>Total amount payable : <span>$<?php echo $grand_total;?></span></p>
-        <a href="shop.php" class="btn">Continue shopping </a>
-        <a href="checkout.php" class="btn" <?php echo ($grand_total)?'':'disabled' ?>>Proceed to checkout</a>
+        <p>Total amount payable : <span><?php echo $grand_total; ?></span></p> <br> 
+        <a href="checkout.php" class="btn" <?php echo ($grand_total)?'':'disabled' ?>>Order with COD</a> <br> <br>
+        <a href="checkout_online.php" class="btn" <?php echo ($grand_total)?'':'disabled' ?>>Order with Online</a> <br> <br>
+        <a href="shop.php" class="btn">Continue shopping </a> <br>
         </div>
     </section>
     <div class="line2"></div>

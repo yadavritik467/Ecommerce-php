@@ -226,22 +226,9 @@ if(mysqli_num_rows($cart_number)>0){
     <p>Get 15% off your next order. Be the first one to learn about promotions special events, new arrivals and more.</p>
     <input type="text"name="" placeholder="Your Email Address">
     <button>Subscribe Now</button>
-</div>
-<div class="line2"></div>
-<div class="client">
-    <div class="box">
-        <img src="" alt="">
     </div>
-    <div class="box">
-        <img src="" alt="">
-    </div>
-    <div class="box">
-        <img src="" alt="">
-    </div>
-    <div class="box">
-        <img src="" alt="">
-    </div>
-</div>
+  <div class="line2"></div>
+ 
 
 <?php  include 'footer.php'; ?>
 

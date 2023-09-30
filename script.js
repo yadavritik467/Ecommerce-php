@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function nextSlide() {
-        console.log('click')
+        // console.log('click')
         currentIndex = (currentIndex + 1) % sliderItems.length;
-        console.log('click',currentIndex)
+        // console.log('click',currentIndex)
         
         showSlide(currentIndex);
     }
@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".testimonial-slider");
     const sliderItems = document.querySelectorAll(".testimonial-item-hide");
-    console.log(sliderItems.length);
+    // console.log(sliderItems.length);
     const prevBtn = document.querySelector(".prev1");
     const nextBtn = document.querySelector(".next1");
     let currentTestimonialIndex = 0;
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function nextSlide() {
         // console.log('click')
         currentTestimonialIndex = (currentTestimonialIndex + 1) % sliderItems.length;
-        console.log('click',currentTestimonialIndex)
+        // console.log('click',currentTestimonialIndex)
         
         showSlide(currentTestimonialIndex);
     }
